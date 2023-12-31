@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    scroll-behavior: smooth;
+}
+
+/* Scroll Effect */
+main{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+section{
+    text-align: center;
+    height: 100vh;
+    scroll-snap-align: start;
+}
+::-webkit-scrollbar {
+    display: none;
+  }
+
+/* Navigation */
+.nav{
+    position: sticky;
+    z-index: 100;
+    display: flex;
+    padding-top: 30px;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo{
+    width: 18%;
+}
+.nav-links{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.nav-links a{
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+}
+.nav-links a:hover{
+    text-decoration: underline;
+    color: #3D0000;
+}
+
+/* Home Page */
+#home{
+    padding-top: 18vh;
+}
+.home-content img{
+    width: 30%;
+    padding-bottom: 20px;
+}
+.home-content h2{
+    font-weight: normal;
+    padding-bottom: 20px;
+}
+.home-content a{
+    text-decoration: none;
+    color: #3D0000;
+}
+.home-content button{
+    margin: 0 20px;
+    border-style: solid;
+    border-color: #3D0000;
+    background-color: white;
+    padding: 15px 32px;
+    border-radius: 10px;
+    box-shadow: 3px 3px #977575;
+    transition: .5s;
+}
+.home-content button:hover{
+    cursor: pointer;
+    transform: translateY(-3px);
+    box-shadow: 3px 6px #977575;
+    transition: .5s;
+}
+.home-content button:active{
+    transform: translateY(3px);
+    box-shadow: 3px 3px #977575;
+    transition: .1s;
+}
