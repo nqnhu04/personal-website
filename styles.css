@@ -5,12 +5,14 @@
     font-family: 'Courier New', Courier, monospace;
     scroll-behavior: smooth;
 }
-
+body{
+    height: 100vh;
+}
 /* Scroll Effect */
 main{
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
-    height: 100vh;
+    height: 100%;
 }
 section{
     text-align: center;
@@ -26,26 +28,37 @@ section{
     position: sticky;
     z-index: 100;
     display: flex;
-    padding-top: 30px;
-    justify-content: space-around;
+    padding: 15px 0;
+    justify-content: center;
     align-items: center;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .3);
+}
+.nav-logo{
+    margin-right: -90px;
 }
 .logo{
-    width: 18%;
+    width: 60%;
 }
 .nav-links{
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
+    gap: 40px;
 }
 .nav-links a{
-    font-size: 18px;
+    font-size: 20px;
     text-decoration: none;
     color: black;
 }
 .nav-links a:hover{
     text-decoration: underline;
     color: #3D0000;
+}
+
+.nav-socials{
+    margin-left: 120px;
+}
+
+.nav-socials a{
+    font-size: 23px;
 }
 
 /* Home Page */
@@ -59,10 +72,13 @@ section{
 .home-content h2{
     font-weight: normal;
     padding-bottom: 20px;
+    max-width: 40%;
+    margin: 0 auto;
 }
 .home-content a{
     text-decoration: none;
     color: #3D0000;
+    font-size: 18px;
 }
 .home-content button{
     margin: 0 20px;
@@ -84,4 +100,85 @@ section{
     transform: translateY(3px);
     box-shadow: 3px 3px #977575;
     transition: .1s;
+}
+
+/* About Page */
+#about{
+    padding-top: 5vh;
+}
+.about-section{
+    margin-top: 10vh;
+    display: flex;
+    gap: 0 5vw;
+    justify-content: center;
+}
+.about-pic{
+    width: 25%;
+    border-radius: 10%;
+}
+.text-section{
+    width: 25%;
+}
+#about p{
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Experience Page */
+#experience{
+    padding-top: 5vh;
+}
+.experience-container{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.card{
+    width: 45%;
+}
+.card img{
+    width: 100%;
+}
+
+/* Skills Page */
+#skills{
+    padding-top: 5vh;
+}
+.skills-container{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: top;
+}
+.row{
+    width: 30%;
+}
+.row > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    border-style: solid;
+    border-color: #3D0000;
+    background-color: white;
+}
+.skill-icons{
+    display: flex;
+    align-items: center;
+}
+.skill-icons p{
+    font-size: 50px;
+}
+.skills-container i{
+    font-size: 50px;
+}
+.skills-container img{
+    max-width: 50px;
+}
+
+/* Contact Page */
+#contact{
+    padding-top: 5vh;
 }
