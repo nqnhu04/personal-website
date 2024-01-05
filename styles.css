@@ -6,13 +6,13 @@
     scroll-behavior: smooth;
 }
 body{
-    height: 100vh;
+    position: fixed;
 }
 /* Scroll Effect */
 main{
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
-    height: 100%;
+    height: 100vh;
 }
 section{
     text-align: center;
@@ -31,7 +31,8 @@ section{
     padding: 15px 0;
     justify-content: center;
     align-items: center;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, .3);
+    box-shadow: 0px 3px 8px black;
+    background-color: #3D0000;
 }
 .nav-logo{
     margin-right: -90px;
@@ -46,19 +47,27 @@ section{
 .nav-links a{
     font-size: 20px;
     text-decoration: none;
-    color: black;
+    color: white;
+    transition: .9s ease-in;
 }
 .nav-links a:hover{
-    text-decoration: underline;
-    color: #3D0000;
+    transform: scale(1.05);
+    transition: .9s ease-out;
 }
-
 .nav-socials{
     margin-left: 120px;
+    gap: 30px;
 }
-
 .nav-socials a{
     font-size: 23px;
+}
+.nav-socials a:hover{
+    transform: scale(1.2);
+    transition: .9s ease-out;
+}
+.active{
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 /* Home Page */
@@ -77,29 +86,32 @@ section{
 }
 .home-content a{
     text-decoration: none;
-    color: #3D0000;
+    color: white;
     font-size: 18px;
 }
-.home-content button{
+.home-btns{
+    display: flex;
+    justify-content: center;
+}
+.home-btns a{
     margin: 0 20px;
-    border-style: solid;
-    border-color: #3D0000;
-    background-color: white;
+    border-style: none;
+    background-color: #3D0000;
     padding: 15px 32px;
     border-radius: 10px;
-    box-shadow: 3px 3px #977575;
-    transition: .5s;
+    box-shadow: 5px 5px 8px black;
+    transition: .5s ease-in;
 }
-.home-content button:hover{
+.home-btns a:hover{
     cursor: pointer;
-    transform: translateY(-3px);
-    box-shadow: 3px 6px #977575;
-    transition: .5s;
+    transform: translateY(-5px);
+    box-shadow: 5px 10px 8px black;
+    transition: .5s ease-in;
 }
-.home-content button:active{
-    transform: translateY(3px);
-    box-shadow: 3px 3px #977575;
-    transition: .1s;
+.home-btns a:active{
+    transform: translateY(5px);
+    box-shadow: 5px 5px 8px black;
+    transition: .1s ease-in;
 }
 
 /* About Page */
@@ -115,6 +127,7 @@ section{
 .about-pic{
     width: 25%;
     border-radius: 10%;
+    box-shadow: 5px 5px 8px black;
 }
 .text-section{
     width: 25%;
@@ -132,13 +145,68 @@ section{
     margin-top: 30px;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 40px;
 }
 .card{
-    width: 45%;
+    display: flex;
+    flex-direction: column;
+    transition: 1s ease-in-out;
 }
-.card img{
-    width: 100%;
+
+.card:hover{
+    transform: scale(1.05);
+    transition: 1s ease-in-out;
+    cursor: pointer;
+}
+.card > div{
+    box-shadow: 0px 0px 8px black;
+}
+.card-img{
+    width:30vw;
+    height:30vh;
+}
+.card-img img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    object-position: top;
+}
+.card-content{
+    margin:-30px auto;
+    height: 290px;
+    width: 400px;
+    background-color: white;
+    padding:20px;
+    z-index: 100;
+}
+.experience-date{
+    font-style: italic;
+    font-size: .9rem;
+}
+.experience-title{
+    margin: 10px 0;
+}
+.languages{
+    margin-top: 10px;
+    font-size: 25px;
+}
+.experience-links{
+    padding: 10px;
+    background-color: white;
+    color:#3D0000;
+    font-size: 1rem;
+    display:flex;
+    margin: auto;
+    z-index: 100;
+}
+.role{
+    padding: 10px;
+    background-color: #3D0000;
+    color:white;
+    font-size: 1rem;
+    margin-left: auto;
+    display:flex;
+    z-index: 100;
 }
 
 /* Skills Page */
@@ -169,16 +237,95 @@ section{
     align-items: center;
 }
 .skill-icons p{
-    font-size: 50px;
+    font-size: 40px;
 }
 .skills-container i{
-    font-size: 50px;
+    font-size: 70px;
 }
 .skills-container img{
-    max-width: 50px;
+    max-width: 60px;
 }
 
 /* Contact Page */
 #contact{
     padding-top: 5vh;
+}
+.contact-intro{
+    margin: 10px 0;
+}
+.contact-container{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social-btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.social-btns a{
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 4px rgba(0,0,0,0.3);
+    width: 350px;
+    color: black;
+    text-decoration: none;
+    transition: 1s;
+}
+.social-btns a:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+    color: #3D0000;
+    transition: 1s;
+}
+.social-btns i{
+    padding-right: 5px;
+    font-size: 16px;
+    transition: 1s;
+}
+.contact-form{
+    box-shadow: 0px 0px 8px rgba(0,0,0,0.3);
+    background-color: #3D0000;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 2vw 4vw;
+    width: 90%;
+    max-width: 40%;
+}
+form input, form textarea{
+    border: 0;
+    outline: none;
+    margin: 10px 0;
+    font-size: 16px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+}
+form button{
+    width: 25%;
+    margin: 20px auto 0;
+    padding: 15px;
+    background-color: white;
+    border-style: none;
+    border-radius: 10px;
+    outline: none;
+    box-shadow: 5px 5px 8px black;
+    transition: .5s ease-in;
+    font-size: 15px;
+}
+form button:hover{
+    transform: translateY(-5px);
+    box-shadow: 5px 10px 8px black;
+    transition: .5s ease-in;
+    cursor: pointer;
+    color: #3D0000;
+}
+form button:active{
+    transform: translateY(-5px);
+    box-shadow: 5px 10px 8px black;
+    transition: .5s ease-in;
+    color: #3D0000;
 }

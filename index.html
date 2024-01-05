@@ -16,7 +16,7 @@
     </head>
     <body>
         <div class="nav">
-            <a class="nav-logo" href="#"><img class="logo" src="nhu-logo.png" alt="logo"></a>
+            <a class="nav-logo" href="#home"><img class="logo" src="nhu-logo.png" alt="logo"></a>
             <ul class="nav-links">
                 <a href="#about">About</a>
                 <a href="#experience">Experience</a>
@@ -24,6 +24,7 @@
                 <a href="#contact">Contact</a>
             </ul>
             <ul class="nav-links nav-socials">
+                <a href="mailto:nqnhu04@gmail.com"><i class="fa-solid fa-envelope"></i></a>
                 <a href="https://www.linkedin.com/in/nhu-nguyen04/"><i class="fa-brands fa-linkedin-in"></i></a>
                 <a href="https://github.com/nqnhu04"><i class="fa-brands fa-github"></i></a>
             </ul>
@@ -36,8 +37,10 @@
                         Hi, I'm Nhu! I'm a 3rd year computer science student at California State University, Long Beach.
                         I enjoy creative problem-solving and making an impact. My motto when coding is: "Simple, clean, and aesthetic."
                     </h2>
-                    <button><a href="Nhu Nguyen - Resume.pdf" download="NhuNguyen-CV.pdf">Download CV</a></button>
-                    <button><a href="#contact">Contact Me</a></button>
+                    <div class="home-btns">
+                        <a href="Nhu Nguyen - Resume.pdf" download="NhuNguyen-CV.pdf">Download CV</a>
+                        <a href="#contact">Contact Me</a>
+                    </div>
                 </div>
             </section>
             <section id="about">
@@ -53,7 +56,7 @@
                         </p>
                         <p>
                             During my time at CSULB, I've been very fortunate to become the <b>president of Women in Computing</b>, an organization that strives to foster a supportive community
-                            for women and non-binary students pursuing tech. I work alongside 10 other amazing individuals who share the same vision for inclusivity and creating an
+                            for women and non-binary students pursuing tech. I'm able to work alongside 10 other amazing individuals who share the same vision for inclusivity and creating an
                             impact. Through the organization, I've partnered with California Southern Edison, Google, NFL, and more to come onto campus and host technical events for
                             our students. My time as president is my proudest and most grateful achievement at CSULB.
                         </p>
@@ -64,17 +67,55 @@
             <section id="experience">
                 <img src="experience.png" alt="experience-logo">
                 <div class="experience-container">
-                    <div class="card">
-                        <img src="apd.png" alt="apd-website">
-                        <div class="card-content">
-                            <h2>Experience 1</h2>
+                    <div class="card" id="saikou">
+                        <div class="card-img">
+                            <img src="saikouniku.png" alt="apd-website">
                         </div>
+                        <div class="card-content">
+                            <p class="experience-date">November 2023 - Present</p>
+                            <h2 class="experience-title">Saikou Niku</h2>
+                            <p class="experience-info">Building an e-commerce site using SquareSpace and personalizing it with custom css</p>
+                            <p class="languages">
+                                <i class="fa-brands fa-squarespace"></i>
+                                <i class="fa-brands fa-css3-alt"></i>
+                            </p>
+                        </div>
+                        <div class="role">Web Designer</div>
                     </div>
-                    <div class="card">
-                        <img src="apd.png" alt="apd-website">
-                        <div class="card-content">
-                            <h2>Experience 2</h2>
+                    <div class="card" id="directv">
+                        <div class="card-img">
+                            <img src="directv.png" alt="apd-website">
                         </div>
+                        <div class="card-content">
+                            <p class="experience-date">August 2023 - December 2023</p>
+                            <h2 class="experience-title">DirecTV</h2>
+                            <p class="experience-info">Led a team of 4 to develop a Computer Vision
+                                model using Pytorch that can detect and classify objects in an image for DirecTV.
+                                Presented to 100+ DirecTV employees and guests and received overwhelming
+                                positive feedback.
+                            </p>
+                            <p class="languages">
+                                <i class="fa-brands fa-python"></i>
+                            </p>
+                        </div>
+                        <div class="role">AI Studio Project Apprentice</div>
+                    </div>
+                    <div class="card" id="apd">
+                        <div class="card-img">
+                            <img src="apd.png" alt="apd-website">
+                        </div>
+                        <div class="card-content">
+                            <p class="experience-date">August 2023 - September 2023</p>
+                            <h2 class="experience-title">American Product Distributors Inc.</h2>
+                            <p class="experience-info">Designed and developed a 4-page website using 
+                                HTML, CSS, and JavaScript. Responsive for mobile.</p>
+                            <p class="languages">
+                                <i class="fa-brands fa-html5"></i>
+                                <i class="fa-brands fa-css3-alt"></i>
+                                <i class="fa-brands fa-js"></i>
+                            </p>
+                        </div>
+                        <div class="role">Web Developer</div>
                     </div>
                 </div>
             </section>
@@ -107,11 +148,7 @@
                             <div class="skill-icons">
                                 <i class="fa-brands fa-java"></i>
                                 <p>⭐</p>
-                            </div>                            
-                            <div class="skill-icons">
-                                <img src="Expressjs.png" alt="express.js">
-                                <p>⭐</p>
-                            </div>                            
+                            </div>                                                    
                             <div class="skill-icons">
                                 <i class="fa-solid fa-database"></i>
                                 <p>⭐</p>
@@ -119,11 +156,7 @@
                             <div class="skill-icons">
                                 <img src="mongodb.png" alt="mongodb">
                                 <p>⭐</p>
-                            </div>                            
-                            <div class="skill-icons">
-                                <img src="json.png" alt="json">
-                                <p>⭐</p>
-                            </div>                            
+                            </div>                                                       
                         </div>
                     </div>
                     <div class="row">
@@ -144,6 +177,10 @@
                             <div class="skill-icons">
                                 <img src="jupyter.png" alt="jupyter notebook">
                                 <p>⭐⭐</p>
+                            </div> 
+                            <div class="skill-icons">
+                                <img src="json.png" alt="json">
+                                <p>⭐</p>
                             </div> 
                         </div>
                     </div>
@@ -172,7 +209,29 @@
             </section>
             <section id="contact">
                 <img src="contact.png" alt="contact-logo">
+                <div class="contact-intro">
+                    <h2>Interested in talking?</h2>
+                    <p>I'd love to hear from you!</p>
+                </div>
+                <div class="social-btns">
+                    <a href="mailto:nqnhu04@gmail.com" class="contact-btn"><i class="fa-solid fa-envelope"></i>nqnhu04@gmail.com</a>
+                    <a href="https://www.linkedin.com/in/nhu-nguyen04/" target="_blank" class="contact-btn"><i class="fa-brands fa-linkedin-in"></i>linkedin.com/in/nhu-nguyen04</a>
+                </div>
+                <div class="contact-container">
+                    <form id="contact-form" action="sendmail.php" method="POST" class="contact-form">
+                        <input type="text" id="name" placeholder="Name*" required>
+                        <input type="email" id="email" placeholder="Email*" required>
+                        <textarea id="message" placeholder="Message*" rows="10"></textarea>
+                        <button type="submit" id="submit-btn">Send <i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
             </section>
         </main>
+        <script
+            src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous">
+        </script>
+        <script src="index.js" charset="utf-8"></script>
     </body>
 </html>
