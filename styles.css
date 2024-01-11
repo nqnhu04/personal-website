@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Roboto Mono", monospace;
     scroll-behavior: smooth;
 }
 body{
@@ -45,7 +45,7 @@ section{
     gap: 40px;
 }
 .nav-links a{
-    font-size: 20px;
+    font-size: 18px;
     text-decoration: none;
     color: white;
     transition: .9s ease-in;
@@ -59,7 +59,7 @@ section{
     gap: 30px;
 }
 .nav-socials a{
-    font-size: 23px;
+    font-size: 20px;
 }
 .nav-socials a:hover{
     transform: scale(1.2);
@@ -75,7 +75,7 @@ section{
     padding-top: 18vh;
 }
 .home-content img{
-    width: 30%;
+    max-width: 30%;
     padding-bottom: 20px;
 }
 .home-content h2{
@@ -125,16 +125,21 @@ section{
     justify-content: center;
 }
 .about-pic{
-    width: 25%;
+    width: 25vw;
+    height: 50vh;
     border-radius: 10%;
     box-shadow: 5px 5px 8px black;
 }
 .text-section{
-    width: 25%;
+    text-align: left;
+    width: 40vw;
 }
 #about p{
+    font-size: 14px;
     margin-bottom: 20px;
-    text-align: left;
+}
+.text-section > p{
+    margin-top: 20px;
 }
 
 /* Experience Page */
@@ -144,6 +149,7 @@ section{
 .experience-container{
     margin-top: 30px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 40px;
 }
@@ -211,39 +217,46 @@ section{
 
 /* Skills Page */
 #skills{
-    padding-top: 5vh;
+    padding: 5vh 5vw 0;
 }
 .skills-container{
     margin-top: 30px;
     display: flex;
     justify-content: space-around;
     align-items: top;
+    flex-wrap: wrap;
 }
 .row{
-    width: 30%;
+    width: 30vw;
 }
-.row > div{
+.row-content{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin-top: 5px;
-    border-style: solid;
-    border-color: #3D0000;
+    margin-top: 30px;
     background-color: white;
+    gap: 15px;
 }
 .skill-icons{
     display: flex;
     align-items: center;
+    flex-direction: column;
+    width: 8vw;
+    transition: .5s ease-in;
 }
 .skill-icons p{
-    font-size: 40px;
+    font-size: 20px;
 }
 .skills-container i{
     font-size: 70px;
 }
 .skills-container img{
     max-width: 60px;
+}
+.skill-icons:hover{
+    transform: scale(1.1);
+    transition: .5s ease-in;
 }
 
 /* Contact Page */
@@ -300,7 +313,7 @@ form input, form textarea{
     outline: none;
     margin: 10px 0;
     font-size: 16px;
-    padding: 20px;
+    padding: 15px;
     background: white;
     border-radius: 10px;
 }
